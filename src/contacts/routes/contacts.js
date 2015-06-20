@@ -7,6 +7,9 @@ var num=0,len=0;
 //var contacts_url = base_url + "/contacts";
 var bodyP=require('body-parser');
 /* GET contacts */
+router.get('/', function(req, res, next) {
+    res.send("Hello World");	
+});
 router.get('/:id', function(req, res, next) {
     res.json(contacts[+(req.params.id)]);	
 });
